@@ -3,7 +3,7 @@
 <template>
   <div class="navbar bg-slate-900">
     <div class="flex-1 ml-3">
-      <img src="movie_reel.svg" height="30" width="30" alt="logo" />
+      <img src="/movie_reel.svg" height="30" width="30" alt="logo" />
       <NuxtLink to="/" class="btn btn-ghost text-white normal-case text-xl"
         >MovieFlix</NuxtLink
       >

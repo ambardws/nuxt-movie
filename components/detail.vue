@@ -6,7 +6,7 @@ defineProps<{
 
 function formatDate(date: string) {
   const dateString = "2023-05-03";
-  const parts = dateString.split("-"); // Membagi string menjadi array ["2023", "05", "03"]
+  const parts = dateString.split("-");
   const formattedDate = `${parts[2]}/${parts[1]}/${parts[0]}`;
   return formattedDate;
 }

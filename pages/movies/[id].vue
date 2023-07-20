@@ -33,5 +33,6 @@ const directing = director.crew.filter((data) => {
       </div>
     </div>
     <Detail :item="item" :directing="directing" />
+    <Footer />
   </div>
 </template>

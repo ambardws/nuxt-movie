@@ -12,14 +12,14 @@ function formatDate(date: string) {
 }
 </script>
 <template>
-  <div class="flex flex-col md:flex-row mt-20 p-10 text-slate-300">
-    <div class="md:flex-1">
+  <div class="flex md:flex-row lg:mt-20 p-10 text-slate-300">
+    <div class="md:flex-1 lg:block hidden">
       <img
         class="rounded-lg mx-auto object-contain md:h-2/4"
         :src="`https://image.tmdb.org/t/p/original${item.poster_path}`"
       />
     </div>
-    <div class="flex-1 pr-20 text-justify">
+    <div class="flex-1 lg:pr-20 text-justify">
       <h1 class="text-2xl">Storyline</h1>
       <p class="mt-5">
         {{ item.overview }}

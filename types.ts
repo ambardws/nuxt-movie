@@ -1,6 +1,6 @@
 export interface Movie {
   adult: boolean;
-  backdropPath: string;
+  backdrop_path: string;
   belongsToCollection: BelongsToCollection;
   budget: number;
   genres: Genre[];

@@ -7,10 +7,16 @@ const item: Movie = await $fetch(
   `${config.public.API_BASE_URL}/${id}?api_key=${config.public.API_KEY}`
 );
 
-const director = await $fetch(
+interface Director {
+  crew: [];
+  cast: [];
+}
+
+const director: Director = await $fetch(
   `${config.public.API_BASE_URL}/${item.id}/credits?api_key=${config.public.API_KEY}`
 );
-const directing = director.crew.filter((data) => {
+
+const directing = director.crew.filter((data: any) => {
   return data.job === "Director";
 });
 </script>
@@ -28,11 +34,12 @@ const directing = director.crew.filter((data) => {
           <p class="py-6">
             {{ item.overview }}
           </p>
-          <button class="btn btn-primary">Watch Trailer</button>
+          <ModalPlayTrailer :item-id="item.id" />
         </div>
       </div>
     </div>
     <Detail :item="item" :directing="directing" />
+    <Casts :casts="director.cast" />
     <Footer />
   </div>
 </template>

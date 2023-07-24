@@ -13,12 +13,13 @@ function formatDate(date: string) {
 </script>
 <template>
   <div class="flex md:flex-row lg:mt-20 p-10 text-slate-300">
-    <div class="md:flex-1 lg:block hidden">
+    <div class="md:flex-1 lg:block hidden h-auto">
       <img
-        class="rounded-lg mx-auto object-contain md:h-2/4"
+        class="rounded-lg mx-auto object-contain h-[400px]"
         :src="`https://image.tmdb.org/t/p/original${item.poster_path}`"
       />
     </div>
+
     <div class="flex-1 lg:pr-20 text-justify">
       <h1 class="text-2xl">Storyline</h1>
       <p class="mt-5">

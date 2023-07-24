@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <h1 class="text-white text-2xl text-center">Casts</h1>
+  <h1 class="text-white text-2xl text-center mt-5">Casts</h1>
   <div class="p-5 flex flex-row overflow-x-auto">
     <div v-for="cast in casts" class="px-3 basis-1/4">
       <div class="bg-slate-500 min-h-[225px] w-[150px] rounded-md">

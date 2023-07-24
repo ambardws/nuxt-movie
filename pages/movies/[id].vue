@@ -12,6 +12,14 @@ interface Director {
   cast: [];
 }
 
+interface Images {
+  backdrops: [];
+}
+
+const images: Images = await $fetch(
+  `${config.public.API_BASE_URL}/${item.id}/images?api_key=${config.public.API_KEY}`
+);
+
 const director: Director = await $fetch(
   `${config.public.API_BASE_URL}/${item.id}/credits?api_key=${config.public.API_KEY}`
 );
@@ -39,6 +47,7 @@ const directing = director.crew.filter((data: any) => {
       </div>
     </div>
     <Detail :item="item" :directing="directing" />
+    <Photos :images="images" />
     <Casts :casts="director.cast" />
     <Footer />
   </div>

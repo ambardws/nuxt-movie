@@ -4,7 +4,7 @@ const props = defineProps<{
 }>();
 </script>
 <template>
-  <h1 class="text-white text-2xl text-center">Photos</h1>
+  <h1 class="text-slate-300 text-2xl text-center">Photos</h1>
   <div class="flex mt-3 p-5 overflow-x-auto">
     <img
       v-for="image in images.backdrops"

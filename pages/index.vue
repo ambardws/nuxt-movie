@@ -40,14 +40,14 @@ items.value = await useApi(page, query);
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950">
+  <div class="min-h-screen bg-slate-50 dark:bg-slate-950">
     <!-- Header Section -->
-    <div class="px-6 py-12 md:px-12 lg:px-16">
+    <div class="px-6 py-12 md:px-12 lg:px-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
       <div class="mx-auto max-w-7xl">
-        <h1 class="text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+        <h1 class="text-4xl font-bold text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
           Popular Movies
         </h1>
-        <p class="mt-4 text-slate-400 md:text-lg">
+        <p class="mt-4 text-slate-600 dark:text-slate-400 md:text-lg">
           Discover the most talked-about films right now
         </p>
       </div>
@@ -62,7 +62,7 @@ items.value = await useApi(page, query);
 
         <!-- Loading Indicator -->
         <div v-if="loading" class="mt-12 flex justify-center">
-          <div class="flex items-center gap-3 text-slate-400">
+          <div class="flex items-center gap-3 text-slate-600 dark:text-slate-400">
             <svg class="h-6 w-6 animate-spin" fill="none" viewBox="0 0 24 24">
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
               <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -76,26 +76,33 @@ items.value = await useApi(page, query);
 </template>
 
 <style scoped>
-/* Smooth transitions for all elements */
-* {
-  @apply transition-colors duration-200;
-}
-
 /* Custom scrollbar */
 :deep(::-webkit-scrollbar) {
   width: 8px;
 }
 
 :deep(::-webkit-scrollbar-track) {
+  background: #f1f5f9;
+}
+
+.dark :deep(::-webkit-scrollbar-track) {
   background: #0f172a;
 }
 
 :deep(::-webkit-scrollbar-thumb) {
-  background: #334155;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 
+.dark :deep(::-webkit-scrollbar-thumb) {
+  background: #334155;
+}
+
 :deep(::-webkit-scrollbar-thumb:hover) {
+  background: #94a3b8;
+}
+
+.dark :deep(::-webkit-scrollbar-thumb:hover) {
   background: #475569;
 }
 </style>

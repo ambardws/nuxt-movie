@@ -14,7 +14,7 @@ export interface Movie {
   poster_path: string;
   productionCompanies: ProductionCompany[];
   productionCountries: ProductionCountry[];
-  releaseDate: string;
+  release_date: string;
   revenue: number;
   runtime: number;
   spokenLanguages: SpokenLanguage[];
@@ -22,7 +22,7 @@ export interface Movie {
   tagline: string;
   title: string;
   video: boolean;
-  voteAverage: number;
+  vote_average: number;
   voteCount: number;
 }
 

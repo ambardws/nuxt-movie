@@ -11,7 +11,7 @@ export interface Movie {
   originalTitle: string;
   overview: string;
   popularity: number;
-  posterPath: string;
+  poster_path: string;
   productionCompanies: ProductionCompany[];
   productionCountries: ProductionCountry[];
   releaseDate: string;

@@ -9,10 +9,13 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
+    // Private keys (server-side only)
+    apiKey: process.env.API_KEY,
+    apiBaseUrl: process.env.API_BASE_URL,
+    
     public: {
+      // Public keys (exposed to client)
       apiBase: "http://localhost:3000",
-      API_BASE_URL: process.env.API_BASE_URL,
-      API_KEY: "b45900d0aae22fc3aa0a9c7a702bbcfe",
     },
   },
 });

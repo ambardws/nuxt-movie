@@ -7,10 +7,7 @@ interface MovieVid {
   results: [];
 }
 
-const config = useRuntimeConfig();
-const result: MovieVid = await $fetch(
-  `${config.public.API_BASE_URL}/${props.itemId}/videos?api_key=${config.public.API_KEY}`
-);
+const result: MovieVid = await $fetch(`/api/movies/videos/${props.itemId}`);
 const trailer = result.results.filter((data: any) => {
   return data.type === "Trailer";
 });

@@ -2,10 +2,8 @@
 import type { Movie } from "~/types";
 const route = useRoute();
 const id = route.params.id;
-const config = useRuntimeConfig();
-const item: Movie = await $fetch(
-  `${config.public.API_BASE_URL}/${id}?api_key=${config.public.API_KEY}`
-);
+
+const item: Movie = await $fetch(`/api/movies/detail/${id}`);
 
 interface Director {
   crew: [];
@@ -16,13 +14,9 @@ interface Images {
   backdrops: [];
 }
 
-const images: Images = await $fetch(
-  `${config.public.API_BASE_URL}/${item.id}/images?api_key=${config.public.API_KEY}`
-);
+const images: Images = await $fetch(`/api/movies/images/${item.id}`);
 
-const director: Director = await $fetch(
-  `${config.public.API_BASE_URL}/${item.id}/credits?api_key=${config.public.API_KEY}`
-);
+const director: Director = await $fetch(`/api/movies/credits/${item.id}`);
 
 const directing = director.crew.filter((data: any) => {
   return data.job === "Director";

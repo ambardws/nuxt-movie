@@ -42,7 +42,7 @@ items.value = await useApi(page, query);
 <template>
   <div class="min-h-screen bg-slate-50 dark:bg-slate-950">
     <!-- Header Section -->
-    <div class="px-6 py-12 md:px-12 lg:px-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+    <div class="px-6 py-12 md:px-12 lg:px-16 bg-white dark:bg-slate-950">
       <div class="mx-auto max-w-7xl">
         <h1 class="text-4xl font-bold text-slate-900 dark:text-white md:text-5xl lg:text-6xl">
           Top Rated
